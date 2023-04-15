@@ -1,1 +1,88 @@
 /* 記事ページのCSS */
+
+/*
+--------------------------------------------------
+ article
+--------------------------------------------------
+*/
+
+.article {
+  padding: 20px;
+}
+
+.article__inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.article__title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.article__image {
+  margin-bottom: 15px;
+}
+
+.article__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.article__info-item {
+  color: gray;
+  font-size: calc(var(--base-fontSize) * 1);
+  margin-left: 10px;
+}
+.article__info-item:first-child {
+  margin-left: 0;
+}
+
+/*
+--------------------------------------------------
+ section
+--------------------------------------------------
+*/
+
+.section {
+  margin-bottom: 20px;
+}
+.section + .section {
+  margin-bottom: 0;
+}
+
+.section__title {
+  font-size: calc(var(--base-fontSize) * 1.5);
+  padding-left: 10px;
+  border-left: 3px solid var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.section__text {
+  font-size: calc(var(--base-fontSize) * 1);
+  line-height: 2;
+}
+
+/*
+--------------------------------------------------
+ Responsive Styles
+--------------------------------------------------
+*/
+@media screen and (max-width: 767px) {
+  .article__image {
+    margin-bottom: 10px;
+  }
+  .article__info {
+    flex-direction: column;
+    align-items: end;
+  }
+  .article__info-item {
+    margin-bottom: 5px;
+  }
+  .article__info-item:last-child {
+    margin-bottom: 0;
+  }
+}
